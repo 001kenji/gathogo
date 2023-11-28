@@ -29,7 +29,7 @@ function App() {
         message : ''
     },
     mode : 'onTouched'
-  }) 
+  })
   const {errors,isSubmitting} = formState
   function themeSetter(props) {
 
@@ -43,14 +43,15 @@ function App() {
   }
 
   var formEmail =  document.getElementById('emailForm')
+
   function EmailSender(event) {
     event.preventDefault();
     
     var btn = document.getElementById('button')
     btn.innerHTML = 'Sending...';
       ShowLoad('show')
-    const serviceID = 'service_vlv7qth';
-    const templateID = 'template_32wnh2a';
+    const serviceID = 'service_c4mgt7z';
+    const templateID = 'template_8ocv8ui';
   
     emailjs.sendForm(serviceID, templateID, formEmail)
      .then(() => {
@@ -74,6 +75,7 @@ function App() {
      
    
   }
+  
 
 
 
@@ -157,7 +159,7 @@ function ShowLoad(props){
 
               <div className='text-slate-50 flex sm:gap-6 flex-row gap-4 p-3 sm:justify-end justify-center dark:text-slate-100 ' id='socialDiv' >
                   <a href="https://www.facebook.com/profile.php?id=100090430154934"><FaFacebook className=' text-blue-600 text-2xl p-1 bg-white rounded-md' /></a>
-                  <a href=" https://whatsapp.com/dl/code=AvT9SeM6rL"><RiWhatsappFill className=' text-green-600  text-2xl p-1 bg-white rounded-md' /></a>
+                  <a href="https://wa.me/qr/DDQ3RHQ7JRZQB1"><RiWhatsappFill className=' text-green-600  text-2xl p-1 bg-white rounded-md' /></a>
                   <a href="https://instagram.com/kariukinicholas2023?igshid=NzZlODBkYWE4Ng=="><FaInstagramSquare className=' bg-black text-pink-600 text-2xl p-1  rounded-md' /></a>
                   <a href="https://twitter.com/Nicolae_karis
  "><FaSquareTwitter className=' text-blue-600  text-2xl p-1 bg-white rounded-md' /></a>
@@ -188,12 +190,13 @@ function ShowLoad(props){
                 </div>
               </div>
   {/* second div */}
+
                 <div id='secondDiv'>
 
                 <div className='sm:justify-center sm:align-middle sm:text-left sm:p-3'>
 
-                <h1 className=' opacity-80 text-yellow-400' >SPECIFICAIONS</h1>
-                <address id='specs' role="list" className='flex list-disc marker:text-transparent   flex-col gap-4  text-white' id='specsAddress'>
+                <h1 className=' opacity-80 flex flex-row justify-center text-center text-yellow-400' >SPECIFICATIONS</h1>
+                <address  role="list" className='flex list-disc marker:text-transparent   flex-col gap-4  text-white' id='specsAddress'>
                  <ul className='grid justify-center gap-3'>
                   <li>Cyber Security</li>
                   <li>programming language</li>
@@ -204,15 +207,11 @@ function ShowLoad(props){
                   
                 </address>
 
-                </div>
-
-               <div>
-
+                </div>     
                 {/* email div */}
-               <div id="Email" className="mx-auto flex  justify-center  mt-2 shadow-sm sm:shadow-cyan-600 sm:shadow-md shadow-purple-400">
-            <div id="emailformDiv" >
-
-            <form onSubmit={EmailSender} id="emailForm" noValidate  className="emailForm">
+               <div  >
+            <div className="mx-auto flex  justify-center  mt-2 shadow-sm sm:shadow-cyan-600 sm:shadow-md shadow-purple-400" id="emailformDiv" >
+                <form onSubmit={EmailSender} id="emailForm" noValidate  className="emailForm">
                 <label htmlFor="from_name">Enter your name</label>
                 {errors.sendersName && <p id="error">{errors.sendersName?.message}</p>}
                 <input  id="from_name" name="from_name" type="text" {...register('from_name',{
@@ -222,6 +221,7 @@ function ShowLoad(props){
                         message : 'less characters'
                     }
                 })} />
+
                 <div id='noDisplay'>
                     <label  htmlFor="to_name">Enter reciever's name</label>
                                     {errors.sendersEmail && <p id="error">{errors.sendersEmail?.message}</p>}
@@ -235,6 +235,7 @@ function ShowLoad(props){
                                     <label htmlFor="email_id">Recipients email</label>
                                     <input id="email_id" name="email_id" type="emial"{...register('email_id',{
                                         disabled : false,
+                                        value : 'kariuki12nicholas@gmail.com',
                                         pattern: {
                                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                                             message: "invalid email address"
@@ -242,8 +243,6 @@ function ShowLoad(props){
                                     })} />
                 </div>
                 
-
-
                 <label htmlFor="message">Enter message</label>
                 {errors.message && <p id="error">{errors.message?.message}</p>}
                 <textarea   name="message" id="message" {...register('message',{
@@ -253,50 +252,8 @@ function ShowLoad(props){
 
                 <button id="button" disable={isSubmitting} type="submit">Send</button>
                 </form>
-                {/* <form onSubmit={EmailSender} id="emailForm" noValidate  className="emailForm">
-                <label htmlFor="from_name">Enter your name</label>
-                {errors.sendersName && <p id="error">{errors.sendersName?.message}</p>}
-                <input placeholder='name' className='dark:bg-slate-800'  id="from_name" name="from_name" type="text" {...register('from_name',{
-                    required :  'Enter name',
-                    minLength : {
-                        value : 5,
-                        message : 'less characters'
-                    }
-                })} />
-
-                <div id='noDisplay'>
-                  <label id='noDisplay'  htmlFor="to_name">Enter reciever's name</label>
-                {errors.sendersEmail && <p id="error">{errors.sendersEmail?.message}</p>}
-                <input id="to_name" name="to_name" type="text" {...register('to_name',{
-                    required : false,
-                    value: 'NICHOLAS'
-                })} />
-                <label id='noDisplay' htmlFor="email_id">Recipients email</label>
-                <input  id="email_id" name="email_id" type="emial"{...register('email_id',{
-                    disabled : false,
-                    pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: "invalid email address"
-                      }
-                })} />
-
-                </div>
-                
-
-                <label htmlFor="message">Enter message</label>
-                {errors.message && <p id="error">{errors.message?.message}</p>}
-                <textarea placeholder='message'   name="message" id="message" {...register('message',{
-                    required : 'Enter message'
-                })}></textarea>
-
-
-                <button id="button" disable={isSubmitting} type="submit">Send</button>
-                </form> */}
-
-
 
             </div>
-        </div>
                 </div>       
 
                 </div>
