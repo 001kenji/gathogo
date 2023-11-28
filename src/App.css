@@ -1,0 +1,275 @@
+@media only screen and (max-width : 640px){
+    #personalDetailsDiv {
+        font-size: smaller;
+        
+        
+        justify-content: center;
+        align-items: center;
+    }
+    #emailForm input, textarea {
+        background-color: transparent;
+        border: 1px solid chocolate;
+        border-radius: 5px;
+        padding: 4px;
+        text-overflow: ellipsis;
+        color: black;
+        background-color: rgb(162, 168, 173);
+    }
+    
+    #emailForm button {
+    background-color: black;
+    color: cyan;
+    width: fit-content;
+    min-width: 60px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    }
+    #emailForm label {
+        background-color: transparent;
+        color: white;
+        font-weight: 500;
+        
+    }
+    #emailForm {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #emailformDiv {
+        
+        border: 1px solid slategray;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    #secondDiv {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    #secondDiv h1 {
+        font-size: 25px;
+    }
+    ul {
+        list-style:circle;
+    }
+    #specsAddress ul{
+        display: grid;
+        
+        justify-content: center;
+        align-items: center ;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+    #dpPickDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #dpPick {
+        width: 140px;
+        justify-content: center;
+        border-radius: 5px;
+        
+    }
+    #firstDiv {
+        display: grid;
+        grid-gap: 15px;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #masterDiv {
+        display: grid ;
+        justify-content: center;
+        align-items: center;
+    }
+    #personalDetailsDiv {
+        display: grid;
+        text-align: center;
+    
+    }
+}
+@media only screen and (min-width : 640px) {
+    #dpPickDiv {
+        display: flex;
+        
+        margin-top: -25px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #emailForm {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #emailformDiv {
+        
+        border: 1px solid slategray;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    #secondDiv {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        padding: 5px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #firstDiv {
+        display: flex;
+        background-color: transparent;
+        padding: 0%;
+        flex-direction: row;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+    }
+    #personalDetailsDiv address {
+        margin-top: 5px;
+        color: white;
+        
+        padding: 5px;
+    }
+    #emailForm input, textarea {
+        background-color: transparent;
+        border: 1.5px solid black;
+        border-radius: 5px;
+        padding: 4px;
+        text-overflow: ellipsis;
+        color: white;
+        background-color: transparent;
+    }
+    
+    #noDisplay {
+        display: none;
+    }
+    #emailForm button {
+    background-color: black;
+    color: cyan;
+    width: fit-content;
+    min-width: 60px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    }
+    #personalDetailsDiv {
+        padding: 4px;
+        
+        font-size: smaller;
+        justify-content: center;
+        font-weight: normal;
+        align-items:center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+   
+}
+@media only screen and (min-width: 768px) {
+    #firstDiv {
+        display: flex;
+        flex-direction: row;
+       
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    #megaCard {
+        border: 1px solid burlywood;
+    }
+    #dpPickDiv {
+        display: flex;
+        background-color: transparent;
+        margin-top: 0px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #masterDiv {
+        
+        width: 100%;
+        justify-content: center;
+        border-radius: 5px;
+        padding: 3px;
+        align-items: center;
+
+    }
+}
+#noDisplay {
+    display: none;
+}
+#error {
+    background-color: black;
+    color: red;
+    font-weight: 600;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 4px 1px;
+}
+#specs {
+
+}
+#page {
+    width: 100%;
+   background-color:  rgb(30 41 59 / var(--tw-bg-opacity));
+   
+}
+#themeiconDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+
+#megaCard {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    border: 1px solid burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#dpPickDiv {
+    
+background-color: transparent;
+}
+#notifier {
+    display: flex;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+    padding: 5px;
+    background-color: black;
+    width: fit-content ;
+    
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+   
+
+}
+#notifier img {
+ 
+    border-radius: 100%;
+}
+#notifier p {
+    text-align: center;
+}  

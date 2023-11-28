@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    /* background-image: url('./assets/lion.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(100%); */
+    
+}
